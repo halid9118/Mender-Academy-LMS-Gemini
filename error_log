@@ -1,0 +1,7 @@
+[12-Mar-2026 03:58:59 UTC] PHP Parse error:  Invalid body indentation level (expecting an indentation level of at least 3) in /home/digitahn/academy.digitalmender.com/create_lms_zip.php on line 295
+[12-Mar-2026 04:00:04 UTC] PHP Parse error:  Invalid body indentation level (expecting an indentation level of at least 3) in /home/digitahn/academy.digitalmender.com/create_lms_zip.php on line 295
+[12-Mar-2026 04:07:24 UTC] PHP Parse error:  Invalid body indentation level (expecting an indentation level of at least 3) in /home/digitahn/academy.digitalmender.com/create_lms_zip.php on line 295
+[12-Mar-2026 04:11:22 UTC] PHP Parse error:  Invalid body indentation level (expecting an indentation level of at least 3) in /home/digitahn/academy.digitalmender.com/create_lms_zip.php on line 295
+[12-Mar-2026 04:57:56 UTC] DB connection failed: SQLSTATE[HY000] [1045] Access denied for user 'digitahn_menderacademy_database_user'@'localhost' (using password: YES)
+[12-Mar-2026 09:21:54 UTC] DB connection failed: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+[12-Mar-2026 09:31:23 UTC] DB connection failed: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)

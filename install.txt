@@ -1,0 +1,40 @@
+# Installation Instructions for cPanel (academy.digitalmender.com)
+
+1. **Extract the ZIP**
+   - Upload the provided ZIP file to your cPanel file manager or via FTP.
+   - Extract the contents into the public_html folder for your subdomain (e.g., `public_html/academy`).
+
+2. **Set Document Root**
+   - Ensure the subdomain’s document root points to the `public` folder inside the extracted directory.
+   - Example: If your subdomain is `academy.digitalmender.com`, the document root should be `/home/user/public_html/academy/public`.
+
+3. **Create Database**
+   - In cPanel, use MySQL® Database Wizard to create a new database and user.
+   - Grant all privileges to the user for that database.
+
+4. **Configure Environment**
+   - Rename `.env.example` to `.env` in the root directory.
+   - Edit `.env` with your database credentials and other settings (APP_URL, etc.).
+   - Make sure `SESSION_SECURE` is set to `true` if you are using HTTPS (recommended).
+
+5. **Import Database Schema**
+   - In phpMyAdmin, select your new database.
+   - Import the file `sql/schema.sql` (or run the migrations sequentially from `sql/migrations/`).
+
+6. **Set Correct File Permissions**
+   - The `storage/uploads` folder must be writable by the web server.
+   - Run these commands via SSH or use cPanel’s file manager to set permissions:
+   - If you cannot use SSH, set the folder permissions to 755 via cPanel’s File Manager → Change Permissions.
+
+7. **Secure the Uploads Folder**
+- The provided `.htaccess` in `storage/uploads` blocks PHP execution – do not remove it.
+
+8. **Verify Installation**
+- Visit `https://academy.digitalmender.com` – you should see a default page (if you have added a route) or a 404 placeholder.
+- Check that database connection works by accessing any page that queries the DB (once controllers are implemented).
+
+9. **Next Steps**
+- Seed sample data by running `php cron/seed_sample_data.php` (if you have SSH) or set up a cron job to run it once.
+- If you don’t have SSH, you can manually run the script via cPanel’s “Cron Jobs” or temporarily access it via browser (but ensure it’s removed afterward).
+
+For any issues, check the error logs in cPanel’s “Errors” section.
